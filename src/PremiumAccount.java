@@ -1,12 +1,16 @@
 public class PremiumAccount implements IAccount {
-    int accountNum;
+
+    //State
+    int accountNumber;
     double accountBalance;
 
+    //Constructor
     public PremiumAccount(int accountNumber){
-        this.accountNum = accountNumber;
-        this.accountBalance = 0.0;
+        this.accountNumber = accountNumber;
+        this.accountBalance = 0;
     }
 
+    //Behaviour
     @Override
     public void Deposit(double amount){
         this.accountBalance = this.accountBalance + amount;
@@ -23,6 +27,6 @@ public class PremiumAccount implements IAccount {
 
     @Override
     public int GetAccountNumber(){
-        return this.accountNum;
+        return this.accountNumber;
     }
 }

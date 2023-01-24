@@ -1,17 +1,20 @@
 public class BasicAccount implements IAccount {
 
-    private int accountNum;
+    //State
+    private int accountNumber;
     private int countWithdraw;
     private double withdrawalLimit;
     private double accountBalance;
 
+    //Constructor
     public BasicAccount(int accountNumber, double withdrawalLimit){
-        this.accountNum = accountNumber;
+        this.accountNumber = accountNumber;
         this.withdrawalLimit = withdrawalLimit;
         this.accountBalance = 0.0;
         this.countWithdraw = 0;
     }
 
+    //Behaviour
     @Override
     public double GetCurrentBalance() {
         return this.accountBalance;
@@ -39,7 +42,7 @@ public class BasicAccount implements IAccount {
     }
 
     public int GetAccountNumber() {
-        return accountNum;
+        return accountNumber;
     }
 
     @Override

@@ -1,10 +1,12 @@
 public class StandardAccount implements IAccount{
 
+    //State
     private int accountNumber;
     private double creditLimit;
     private double accountBalance;
 
 
+    //Constructor
     public StandardAccount(int accountNumber, double creditLimit){
         this.accountNumber = accountNumber;
         if(creditLimit > 0) {
@@ -16,6 +18,7 @@ public class StandardAccount implements IAccount{
         this.accountBalance = 0.0;
     }
 
+    //Behaviour
     @Override
     public double GetCurrentBalance() {
         return this.accountBalance;

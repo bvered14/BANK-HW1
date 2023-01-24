@@ -3,11 +3,15 @@ import java.util.List;
 
 public class Bank implements IBank {
 
+    //State
     List<IAccount> bankList;
+
+    //Constructor
     public Bank(){
         this.bankList = new ArrayList<>();
     }
 
+    //Behaviour
     @Override
     public void OpenAccount(IAccount account) {
         this.bankList.add(account);
